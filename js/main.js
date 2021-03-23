@@ -13,6 +13,7 @@ const mySwiper = new Swiper('.swiper-container', {
 const buttonCart = document.querySelector('.button-cart');
 const modalCart = document.querySelector('#modal-cart');
 const modalClose = document.querySelector('.modal-close');
+const background=document.querySelector('.overlay');
 
 const openModal = function () {
 	modalCart.classList.add('show');
@@ -21,8 +22,17 @@ const closeModal = function () {
 	modalCart.classList.remove('show');
 }
 
+background.onclick=function(event){
+
+	if(event.target.className.includes("overlay") ){
+		
+		closeModal();
+	}
+};
+
 buttonCart.addEventListener("click", openModal);
 modalClose.addEventListener('click', closeModal);
+
 
 // scroll smooth
 
