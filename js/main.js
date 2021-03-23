@@ -8,3 +8,18 @@ const mySwiper = new Swiper('.swiper-container', {
 	},
 });
 
+//cart
+
+const buttonCart = document.querySelector('.button-cart');
+const modalCart = document.querySelector('#modal-cart');
+const modalClose = document.querySelector('.modal-close');
+
+const openModal = function () {
+	modalCart.classList.add('show');
+}
+const closeModal = function () {
+	modalCart.classList.remove('show');
+}
+
+buttonCart.addEventListener("click", openModal);
+modalClose.addEventListener('click',closeModal);
